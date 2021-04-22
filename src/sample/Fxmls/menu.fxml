@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #87CEEB;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.MenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="755.0" style="-fx-background-color: #87CEEB;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.MenuController">
     <children>
-        <AnchorPane layoutX="566.0" layoutY="14.0" prefHeight="334.0" prefWidth="120.0" style="-fx-background-color: #B0E0E6; -fx-background-radius: 10;">
-         <children>
-            <Button fx:id="bInsert" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: #4682B4; -fx-background-radius: 10;" text="Добавление" textFill="WHITE">
-               <font>
-                  <Font name="Arial Italic" size="13.0" />
-               </font>
-            </Button>
-            <Button fx:id="bUpdate" layoutX="14.0" layoutY="52.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: #4682B4; -fx-background-radius: 10;" text="Изменение" textFill="WHITE">
-               <font>
-                  <Font name="Arial Italic" size="13.0" />
-               </font>
-            </Button>
-                <Button fx:id="bDelet" layoutX="14.0" layoutY="94.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: #4682B4; -fx-background-radius: 10;" text="Удаление" textFill="WHITE">
-                    <font>
-                        <Font name="Arial Italic" size="13.0" />
-                    </font>
-                </Button>
-         </children>
-        </AnchorPane>
-      <ComboBox fx:id="cmb" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="542.0" promptText="Выберите таблицу" />
-      <TableView fx:id="table" layoutX="14.0" layoutY="49.0" prefHeight="344.0" prefWidth="542.0">
+      <TableView fx:id="table" layoutX="7.0" layoutY="54.0" prefHeight="344.0" prefWidth="742.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="201.0" text="C2" />
+            <TableColumn fx:id="pacColumn" editable="false" prefWidth="89.0" sortable="false" text="Студент" />
+            <TableColumn fx:id="docColumn" editable="false" minWidth="0.0" prefWidth="90.0" sortable="false" text="Доктор" />
+            <TableColumn fx:id="diagColumn" editable="false" minWidth="0.0" prefWidth="79.0" sortable="false" text="Диагноз" />
+            <TableColumn fx:id="dataColumn" editable="false" prefWidth="113.0" sortable="false" text="Дата посещения" />
+            <TableColumn fx:id="pervColumn" editable="false" prefWidth="82.0" text="Первичное?" />
+            <TableColumn fx:id="vtorColumn" editable="false" prefWidth="85.0" text="Вторичное?" />
+            <TableColumn fx:id="infoColumn" editable="false" prefWidth="203.0" sortable="false" text="Информация" />
         </columns>
       </TableView>
-      <Button fx:id="bExt" layoutX="580.0" layoutY="354.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: #4682B4; -fx-background-radius: 10;" text="Выход" textFill="WHITE">
+      <AnchorPane layoutX="6.0" layoutY="6.0" prefHeight="41.0" prefWidth="589.0" style="-fx-background-color: #B0E0E6; -fx-background-radius: 10;">
+         <children>
+            <Button fx:id="bFind" layoutX="397.0" layoutY="5.0" mnemonicParsing="false" onAction="#btnFindPressed" prefHeight="32.0" prefWidth="71.0" style="-fx-background-color: #4682B4; -fx-background-radius: 10;" text="Поиск" textFill="WHITE">
+               <font>
+                  <Font name="Arial Italic" size="13.0" />
+               </font>
+            </Button>
+            <TextField fx:id="teFind" layoutX="5.0" layoutY="9.0" prefHeight="26.0" prefWidth="378.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+            <Button fx:id="bExt" layoutX="496.0" layoutY="5.0" mnemonicParsing="false" onAction="#btnExtPressed" prefHeight="32.0" prefWidth="71.0" style="-fx-background-color: #4682B4; -fx-background-radius: 10;" text="Сброс" textFill="WHITE">
+               <font>
+                  <Font name="Arial Italic" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button fx:id="bInsert" layoutX="607.0" layoutY="6.0" mnemonicParsing="false" onAction="#btnAddPressed" prefHeight="41.0" prefWidth="134.0" style="-fx-background-color: #4682B4; -fx-background-radius: 10;" text="Новое посещение" textFill="WHITE">
          <font>
             <Font name="Arial Italic" size="13.0" />
          </font>

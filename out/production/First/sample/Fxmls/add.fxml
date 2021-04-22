@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="356.0" prefWidth="455.0" style="-fx-background-color: #87CEEB;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.AddController">
+    <children>
+        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="334.0" prefWidth="427.0" style="-fx-background-color: #B0E0E6; -fx-background-radius: 10;">
+            <children>
+                <Button fx:id="bAddVisit" layoutX="103.0" layoutY="284.0" mnemonicParsing="false" onAction="#setAddButton" prefHeight="36.0" prefWidth="228.0" style="-fx-background-color: #4682B4; -fx-background-radius: 10;" text="Добавить" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Italic" size="13.0" />
+                    </font>
+                </Button>
+            <DatePicker fx:id="btnData" layoutX="39.0" layoutY="144.0" prefHeight="32.0" prefWidth="252.0" promptText="Дата посещения" />
+            <ComboBox fx:id="cmbStud" layoutX="177.0" layoutY="24.0" onAction="#cmbStudPresed" prefHeight="25.0" prefWidth="219.0" />
+            <ComboBox fx:id="cmbDoc" layoutX="177.0" layoutY="63.0" onAction="#cmbDocPresed" prefHeight="25.0" prefWidth="219.0" />
+            <TextField fx:id="teInfo" layoutX="39.0" layoutY="231.0" prefHeight="32.0" prefWidth="359.0" promptText="Информация">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="40.0" layoutY="28.0" text="Выберите студента" />
+            <Label layoutX="42.0" layoutY="67.0" text="Выберите доктора" />
+            <Label layoutX="43.0" layoutY="106.0" text="Выберите диагноз" />
+            <ComboBox fx:id="cmbDiag" layoutX="177.0" layoutY="102.0" onAction="#cmbDiagPresed" prefHeight="25.0" prefWidth="219.0" />
+            <CheckBox fx:id="cbPerv" layoutX="39.0" layoutY="190.0" mnemonicParsing="false" text="Первичное посещение" />
+            <CheckBox fx:id="cbVtor" layoutX="238.0" layoutY="190.0" mnemonicParsing="false" text="Повторное посещение" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
